@@ -36,7 +36,7 @@ export async function mostrarProfile() {
         </div>
       </div>
 
-      <button id="edit-profile-btn" class="edit-btn">✏️ Editar Perfil</button>
+      <button id="edit-profile-btn" class="edit-btn">Editar Perfil</button>
 
       <div id="edit-form" style="display:none;">
         <h3>Editar Perfil</h3>
@@ -87,10 +87,10 @@ export async function mostrarProfile() {
       .eq('auth_id', user.id);
 
     if (error) {
-      mensaje.textContent = '❌ Error al actualizar: ' + error.message;
+      mensaje.textContent = 'Error al actualizar: ' + error.message;
       mensaje.style.color = 'red';
     } else {
-      mensaje.textContent = '✅ Perfil actualizado';
+      mensaje.textContent = 'Perfil actualizado';
       mensaje.style.color = 'green';
       setTimeout(() => mostrarProfile(), 1000);
     }

@@ -9,7 +9,7 @@ export async function mostrarFeed() {
   app.innerHTML = `
     <div class="feed-container">
       <header class="app-header">
-        <h1>📸 Instagram Clone</h1>
+        <h1>Instagram Clone</h1>
       </header>
       
       <div id="publicaciones-feed"></div>
@@ -170,10 +170,10 @@ export async function mostrarFeed() {
       .eq('id', publicacionId);
 
     if (error) {
-      mensaje.textContent = '❌ Error al eliminar';
+      mensaje.textContent = 'Error al eliminar';
       mensaje.style.color = 'red';
     } else {
-      mensaje.textContent = '✅ Publicación eliminada';
+      mensaje.textContent = 'Publicación eliminada';
       mensaje.style.color = 'green';
       cargarPublicaciones();
     }
