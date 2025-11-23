@@ -4,6 +4,7 @@ import { mostrarLogin } from './componentes/login.js';
 import { mostrarFeed } from './componentes/feed.js';
 import { mostrarUpload } from './componentes/upload.js';
 import { mostrarProfile } from './componentes/profile.js';
+import './style.css';
 
 const routes = {
   'registro': mostrarRegistro,
