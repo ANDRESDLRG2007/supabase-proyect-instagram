@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Instragram Supabase</string>
+    <string name="title_activity_main">Instragram Supabase</string>
+    <string name="package_name">com.supabase.app</string>
+    <string name="custom_url_scheme">com.supabase.app</string>
+</resources>
