@@ -24,10 +24,9 @@ export async function cargarMenu() {
   const { data: { user } } = await supabase.auth.getUser();
 
   if (!user) {
-    // Usuario no logueado
     menu.innerHTML = `
       <nav class="nav-bar">
-        <div class="nav-brand">📸 Instagram Clone</div>
+        <div class="nav-brand">Instagram Supabase</div>
         <div class="nav-links">
           <button data-action="login">Iniciar sesión</button>
           <button data-action="registro">Registrarse</button>
@@ -35,21 +34,20 @@ export async function cargarMenu() {
       </nav>
     `;
   } else {
-    // Usuario logueado
     menu.innerHTML = `
       <nav class="nav-bar">
-        <div class="nav-brand">📸 Instagram Clone</div>
+        <div class="nav-brand">Instagram Supabase</div>
         <div class="nav-links">
-          <button data-action="feed">🏠 Inicio</button>
-          <button data-action="upload">➕ Publicar</button>
-          <button data-action="profile">👤 Perfil</button>
-          <button data-action="logout">🚪 Salir</button>
+          <button data-action="feed">Inicio</button>
+          <button data-action="upload">Publicar</button>
+          <button data-action="profile">Perfil</button>
+          <button data-action="logout">Salir</button>
         </div>
       </nav>
     `;
   }
 
-  // Asignar event listeners
+
   menu.querySelectorAll('button').forEach(button => {
     const action = button.getAttribute('data-action');
     if (action === 'logout') {
@@ -60,7 +58,6 @@ export async function cargarMenu() {
   });
 }
 
-// Inicializar app
 document.addEventListener('DOMContentLoaded', async () => {
   await cargarMenu();
   
