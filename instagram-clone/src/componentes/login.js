@@ -1,4 +1,4 @@
-import { supabase } from './supabase.js';
+import { supabase } from '../supabase.js';
 import { mostrarRegistro } from './register.js';
 
 export function mostrarLogin() {
@@ -47,6 +47,6 @@ export function mostrarLogin() {
     }
 
     console.log('Usuario logueado:', data.user);
-    location.reload(); // Recargar para mostrar el feed
+    location.reload();
   });
 }

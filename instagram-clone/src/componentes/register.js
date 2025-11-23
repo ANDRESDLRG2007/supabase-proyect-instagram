@@ -1,10 +1,10 @@
-import { supabase } from './supabase.js';
+import { supabase } from '../supabase.js';
 
 export function mostrarRegistro() {
   const app = document.getElementById('app');
   app.innerHTML = `
     <div class="auth-container">
-      <h1>📸 Instagram Clone</h1>
+      <h1>Instagram Clone</h1>
       <h2>Crear Cuenta</h2>
       <form id="registro-form">
         <input type="text" name="username" placeholder="Nombre de usuario" required />
@@ -54,7 +54,6 @@ export function mostrarRegistro() {
       return;
     }
 
-    // Insertar en tabla "usuarios"
     const { error: errorInsert } = await supabase.from('usuarios').insert([
       { 
         auth_id: uid, 
@@ -70,10 +69,9 @@ export function mostrarRegistro() {
       return;
     }
 
-    alert('✅ Registro exitoso. Verifica tu correo y luego inicia sesión.');
+    alert('Registro exitoso. Verifica tu correo y luego inicia sesión.');
   });
 
-  // Evento para ir al login
   document.getElementById('ir-login').addEventListener('click', () => {
     const { mostrarLogin } = require('./login.js');
     mostrarLogin();

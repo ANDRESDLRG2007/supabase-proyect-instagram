@@ -1,9 +1,9 @@
 import { supabase } from './supabase.js';
-import { mostrarRegistro } from './register.js';
-import { mostrarLogin } from './login.js';
-import { mostrarFeed } from './feed.js';
-import { mostrarUpload } from './upload.js';
-import { mostrarProfile } from './profile.js';
+import { mostrarRegistro } from './componentes/register.js';
+import { mostrarLogin } from './componentes/login.js';
+import { mostrarFeed } from './componentes/feed.js';
+import { mostrarUpload } from './componentes/upload.js';
+import { mostrarProfile } from './componentes/profile.js';
 
 const routes = {
   'registro': mostrarRegistro,
